@@ -1,0 +1,34 @@
+<p>Data Binding Works!</p>
+
+<div class="row">
+  <div class="col-4">
+    <h2>One-Way Data Binding (From Component to Template)</h2>
+    <hr>
+    <h4>{{ courseName }}</h4> <p>{{ inputType }}</p>
+    <input type="text" value="{{ courseName }}" placeholder="Enter Text" />
+    <input type="{{ inputType }}" />
+    <input type="{{ inputType2 }}" />
+  </div>
+  <div class="col-4">
+    <h2>Property Binding</h2>
+    <hr>
+    <div class="{{ myClassName }}">Danger</div> <div class="bg-danger">Danger (Static Class)</div>
+    <input type="text" value="{{ courseName }}" /> <input type="text" [value]="courseName" /> </div>
+  <div class="col-4">
+    <h2>Event Binding and User Interaction</h2>
+    <hr>
+    <button class="btn btn-success" (click)="showAlert('Hi')">Show Welcome</button>
+    <span (click)="showAlert('This is from span')">Click Me</span>
+    <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+  </div>
+  <div class="col-5">
+    <h2>Two-Way Data Binding (Using ngModel)</h2>
+    <hr>
+    <input type="text" [(ngModel)]="courseName" /> - {{ courseName }}
+  </div>
+  <div class="col-6">
+    <h2>Two-Way Data Binding (Using String Interpolation)</h2>
+    <hr>
+    <h2>{{ firstName }}</h2> </div>
+</div>
+
